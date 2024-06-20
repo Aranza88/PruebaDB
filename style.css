@@ -1,0 +1,239 @@
+/* Características generales */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Mulish", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+/**************************/
+/********** Main **********/
+/**************************/
+
+/* Caracteristicas generales del contenido */
+body{
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    padding: 10px;
+    color: #061826;
+    overflow-x: hidden;
+    background: linear-gradient(135deg, #3f87a6, rgb(165, 180, 252), rgb(79, 70, 229));
+}
+
+/* Contenedor del form */
+.container{
+    margin: 0 auto;
+    max-width: 700px;
+    width: 100%;
+    background-color: #fff;
+    padding: 25px 30px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+}
+
+/* Título */
+.container .title{
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 1px;
+    padding-left: 2px;
+}
+
+/* Línea decoración debajo del título */
+.container .title::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 33px;
+    border-radius: 5px;
+    background: linear-gradient(135deg, #3f87a6, rgb(165, 180, 252), rgb(79, 70, 229));
+}
+
+/* Características de los inputs */
+.container form .product-details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+}
+
+form .product-details .input-box{
+    margin-bottom: 15px;
+    width: calc(100% / 2 - 20px);
+}
+
+form .input-box span{
+    margin-left: 5px;
+}
+
+form .input-box span .details{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.product-details .input-box input{
+    height: 45px;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 15px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+
+.product-details .input-box input:focus
+.product-details .input-box input:valid{
+    border-color: rgb(102, 122, 200);
+}
+
+form .input-box select{
+    outline: none;
+    border-radius: 5px;
+    height: auto;
+    width: 15%;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    transition: all 0.3s ease;
+    text-align: center;
+    margin-left: 10px;
+}
+
+/* Características del botón de búsqueda */
+form .btn-search{
+    text-align: center;
+    margin-top: -8px;
+}
+
+form .btn-search input{
+    height: 100%;
+    width: 50%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    background: linear-gradient(135deg, #3f87a6, rgb(165, 180, 252), rgb(79, 70, 229));
+    transition: all 0.4s ease;
+}
+
+form .btn-search input:hover{
+    transform: scale(0.99);
+    background: linear-gradient(-135deg, #3f87a6, rgb(165, 180, 252), rgb(79, 70, 229));
+}
+
+.content .subtitle{
+    display: block;
+    font-size: 20px;
+    padding: 10px;
+    margin-left: -8px;
+    margin-bottom: -10px;
+}
+
+/* Características de la tabla */
+.res_table{
+    display: block;
+    justify-content: center;
+    height: 200px;
+    width: 86%;
+    margin: auto;
+    border-collapse: collapse;
+    margin-top: 15px;
+    text-align: center;
+    overflow: scroll;
+}
+
+.res_table thead th {
+    background-color: #3f87a638;
+    border: 1px solid rgba(109, 106, 162, 0.406);
+    border-bottom: 1px solid rgba(32, 29, 93, 0.41);
+    padding: 10px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+  
+.res_table tbody td {
+    border: 1px solid rgba(109, 106, 162, 0.406);
+    padding: 10px;
+}
+
+.res_table tbody tr:nth-child(even) {
+    background-color: rgba(78, 70, 229, 0.242);
+}
+
+.res_table tbody tr:nth-child(odd) {
+    background-color: rgba(165, 180, 252, 0.321);
+}
+
+/* Características de los botones*/
+.btn {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.btn a{
+    height: 100%;
+    width: 25%;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    text-decoration: none;
+    background: linear-gradient(135deg, #3f87a6, rgb(165, 180, 252), rgb(79, 70, 229));
+    transition: all 0.4s ease;
+}
+
+.btn a:hover{
+    transform: scale(0.99);
+    background: linear-gradient(-135deg, #3f87a6, rgb(165, 180, 252), rgb(79, 70, 229));
+}
+
+/* Responsividad del formulario*/
+@media(max-width: 584px){
+    .container{
+        max-width: 100%;
+    }
+
+    form .product-details .input-box{
+        margin-bottom: 15px;
+        width: 100%;
+    }
+
+    .content form .product-details{
+        max-height: 300px;
+        overflow-y: scroll;
+    }
+
+    .product-details::-webkit-scrollbar{
+        width: 5px;
+    }
+
+    .btn a{
+        min-width: 50%;
+    }
+}
+
+

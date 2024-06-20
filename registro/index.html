@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Metadatos -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Título -->
+    <title>Registro de artículos</title>
+
+    <!-- CSS -->
+    <link href="style.css" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../images/icono.png">
+
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="title">Registro de articulo</div>
+        <div class="content">
+            <form action="respuesta_registro.php" method="post">
+                <div class="product-details">
+                    <div class="input-box">
+                        <span class="details">Producto</span>
+                        <input type="text" placeholder="Inserte el nombre del producto" name="nombre" id="nombre">
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Tipo de producto</span>
+                        <input type="text" placeholder="Inserte el tipo del producto" name="tipo" id="tipo">
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Precio</span>
+                        <input type="text" placeholder="Inserte el precio del producto" name="precio" id="precio">
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Stock</span>
+                        <input type="text" placeholder="Inserte el stock del producto" name="stock" id="stock">
+                    </div>
+                </div>
+                <div class="btn-register">
+                    <input type="submit" name="register" value="Registrar">
+                </div>
+            </form>
+            <div class="btn">
+                <a href="../">Menú principal</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
